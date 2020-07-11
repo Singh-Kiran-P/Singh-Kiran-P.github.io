@@ -2431,7 +2431,7 @@ blockquote.blockquote-left .parson { font-weight: 600; }
 .p-65px-tb {padding-top: 65px; padding-bottom: 65px }
 .p-70px-tb {padding-top: 70px; padding-bottom: 70px }
 .p-75px-tb {padding-top: 75px; padding-bottom: 75px }
-.p-80px-tb {padding-top: 80px; padding-bottom: 80px }
+.p-80px-tb {padding-top: 0px; padding-bottom: 80px }
 .p-85px-tb {padding-top: 85px; padding-bottom: 85px }
 .p-90px-tb {padding-top: 90px; padding-bottom: 90px }
 .p-95px-tb {padding-top: 95px; padding-bottom: 95px }
