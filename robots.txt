@@ -1,4 +1,4 @@
 Sitemap: https://singh-kiran-p.ga/sitemap.xml/
 User-agent:*
 Disallow:
-ss
+sssqds
