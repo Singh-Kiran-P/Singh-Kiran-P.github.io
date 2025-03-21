@@ -39,7 +39,7 @@ export function Header() {
       <div className="container max-w-6xl mx-auto px-4">
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-primary">
-            Singh<span className="text-foreground">Kiran</span>
+            Ks<span className="text-foreground">Code</span>
           </Link>
 
           <nav className="hidden md:flex items-center space-x-8">

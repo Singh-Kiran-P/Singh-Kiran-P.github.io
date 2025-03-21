@@ -39,7 +39,7 @@ export function AboutSection() {
           <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-lg -z-10"></div>
           <Image
             src="/placeholder.svg?height=600&width=600"
-            alt="Kiran Singh"
+            alt="Kiran Pal Singh"
             width={600}
             height={600}
             className="rounded-lg shadow-lg object-cover w-full"

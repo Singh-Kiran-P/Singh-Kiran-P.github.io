@@ -44,7 +44,7 @@ export function HeroSection() {
           transition={{ duration: 0.5, delay: 0.3 }}
         >
           Hello, my name is <br className="hidden md:block" />
-          <span className="text-primary">Singh Kiran</span>
+          <span className="text-primary">Kiran</span>
         </motion.h1>
 
         <motion.p

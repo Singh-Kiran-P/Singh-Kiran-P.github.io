@@ -121,7 +121,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium">Email</h4>
-                  <p className="text-muted-foreground">contact@kiransingh.com</p>
+                  <p className="text-muted-foreground">kiran@kscode.eu</p>
                 </div>
               </div>
 
