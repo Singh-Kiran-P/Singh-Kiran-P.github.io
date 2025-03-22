@@ -5,6 +5,7 @@ import "./globals.css"
 import { ThemeProvider } from "@/components/theme-provider"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
+import PlausibleProvider from 'next-plausible'
 
 const inter = Inter({ subsets: ["latin"] })
 
@@ -22,6 +23,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
+      <head>
+      <PlausibleProvider domain="https://kscode.eu" customDomain="https://analytics.kscode.eu/" />
+
+      </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Header />
