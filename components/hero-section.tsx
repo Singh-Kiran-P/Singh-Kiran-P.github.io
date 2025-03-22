@@ -63,16 +63,19 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.7 }}
         >
+          <Link href="#projects">
           <Button size="lg" className="group">
             View Projects
             <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
           </Button>
-          <Link href="https://github.com" target="_blank">
+          </Link>
+       
+          {/* <Link href="https://github.com" target="_blank">
             <Button size="lg" variant="outline" className="gap-2">
               <Github className="h-4 w-4" />
               GitHub
             </Button>
-          </Link>
+          </Link> */}
         </motion.div>
       </motion.div>
     </section>

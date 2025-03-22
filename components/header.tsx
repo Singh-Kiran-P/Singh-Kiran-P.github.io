@@ -57,7 +57,10 @@ export function Header() {
           </nav>
 
           <div className="hidden md:block">
+            <Link href="mailto:kiran@kscode.eu">
             <Button>Get in Touch</Button>
+
+            </Link>
           </div>
 
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)} aria-label="Toggle menu">

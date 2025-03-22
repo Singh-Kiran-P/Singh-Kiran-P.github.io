@@ -8,7 +8,7 @@ export function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-center">
           <div className="mb-6 md:mb-0">
             <Link href="/" className="text-2xl font-bold text-primary">
-              Kiran Pal<span className="text-foreground">Singh </span>
+              Kiran Pal <span className="text-foreground"> Singh </span>
             </Link>
             <p className="text-muted-foreground mt-2 text-sm">
               Building impactful applications through data science and software engineering.
@@ -25,7 +25,7 @@ export function Footer() {
               <span className="sr-only">GitHub</span>
             </Link>
             <Link
-              href="https://linkedin.com"
+              href="https://be.linkedin.com/in/kiran-pal-singh"
               target="_blank"
               className="text-muted-foreground hover:text-primary transition-colors"
             >

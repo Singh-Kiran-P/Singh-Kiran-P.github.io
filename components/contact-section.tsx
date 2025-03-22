@@ -131,7 +131,7 @@ export function ContactSection() {
                 </div>
                 <div>
                   <h4 className="font-medium">Phone</h4>
-                  <p className="text-muted-foreground">+32 (0) 123 456 789</p>
+                  <p className="text-muted-foreground">+32 (0) 488 802 851</p>
                 </div>
               </div>
             </div>
