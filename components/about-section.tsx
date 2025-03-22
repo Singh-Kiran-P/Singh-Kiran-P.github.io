@@ -38,7 +38,7 @@ export function AboutSection() {
         <motion.div variants={itemVariants} className="relative">
           <div className="absolute -top-4 -left-4 w-24 h-24 bg-primary/10 rounded-lg -z-10"></div>
           <Image
-            src="/placeholder.svg?height=600&width=600"
+            src="/images/img.jpeg"
             alt="Kiran Pal Singh"
             width={600}
             height={600}
