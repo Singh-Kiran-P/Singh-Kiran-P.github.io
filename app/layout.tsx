@@ -22,9 +22,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-      <PlausibleProvider domain="https://kscode.eu" customDomain="https://analytics.kscode.eu/" >
     <html lang="en" suppressHydrationWarning>
+<head>
+<PlausibleProvider domain="kscode.eu" trackLocalhost={true} enabled={true} customDomain="https://analytics.kscode.eu/" />
 
+</head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem disableTransitionOnChange>
           <Header />
@@ -33,7 +35,6 @@ export default function RootLayout({
         </ThemeProvider>
       </body>
     </html>
-    </PlausibleProvider>
   
   )
 }
