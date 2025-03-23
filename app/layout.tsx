@@ -24,7 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
 <head>
-<PlausibleProvider domain="kscode.eu" trackLocalhost={true} enabled={true} customDomain="https://analytics.kscode.eu/" />
+<PlausibleProvider domain="kscode.eu" trackLocalhost={true} enabled={true} customDomain="https://analytics.kscode.eu" />
 
 </head>
       <body className={inter.className}>
