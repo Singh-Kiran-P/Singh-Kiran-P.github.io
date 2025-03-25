@@ -79,12 +79,12 @@ export async function sendContactForm({ name, email, message }: ContactFormProps
 
     // Create a email template with a good modern template context: somebody fill a services contact form on my site
     const { data, error } = await resend.emails.send({
-        from: "Kscode Contact Form <info@kscode.eu>",
+        from: "Kscode <info@kscode.eu>",
         to: email,
         subject: "Confirmation: We've Received Your Inquiry",
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
-            <div style="background-color: #f59e0b; padding: 15px; border-radius: 8px 8px 0 0; text-align: center;">
+            <div style="background-color: #0A84FF; padding: 15px; border-radius: 8px 8px 0 0; text-align: center;">
               <h2 style="color: #fff; margin: 0;">Thank You for Your Inquiry</h2>
             </div>
             <div style="padding: 20px; background-color: #fff;">
@@ -102,7 +102,7 @@ export async function sendContactForm({ name, email, message }: ContactFormProps
                 Best regards, <br><strong>Kiran <br>Founder, Kscode</strong>
               </p>
             </div>
-            <div style="text-align: center; padding: 15px; background-color: #f9f9f9; border-radius: 0 0 8px 8px;">
+            <div style="text-align: center; padding: 15px; background-color: #0A84FF; border-radius: 0 0 8px 8px;">
               <p style="font-size: 12px; color: #777;">This is an automated confirmation email.</p>
             </div>
           </div>
