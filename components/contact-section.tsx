@@ -8,37 +8,49 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { MapPin, Mail, Phone, Send } from "lucide-react"
+import { sendContactForm } from "@/lib/actions"
+import { toast } from "sonner"
 
 export function ContactSection() {
   const ref = useRef<HTMLDivElement>(null)
   const isInView = useInView(ref, { once: true, amount: 0.2 })
-  const [formState, setFormState] = useState({
+
+  const [formState, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
     message: "",
+    subject: ""
   })
+  const [status, setStatus] = useState<"idle" | "loading" | "success" | "error">("idle")
+  const [errorMessage, setErrorMessage] = useState("")
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormState({
-      ...formState,
-      [e.target.name]: e.target.value,
-    })
+    const { name, value } = e.target
+    setFormData((prev) => ({ ...prev, [name]: value }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Form submission logic would go here
-    console.log("Form submitted:", formState)
-    // Reset form
-    setFormState({
-      name: "",
-      email: "",
-      subject: "",
-      message: "",
-    })
-    // Show success message
-    alert("Thank you for your message! I'll get back to you soon.")
+    setStatus("loading")
+
+    const promise = () =>
+      sendContactForm(formState)
+        .then((result) => {
+          if (result.success) {
+            setStatus("success");
+            setFormData({ name: "", email: "", message: "", subject: "" });
+            return { message: `Hey ${formState.name}😄, Your message has been sent!` };
+          } else {
+            setStatus("error");
+            throw new Error(result.error || "Failed to send message. Please try again.");
+          }
+        });
+
+    toast.promise(promise, {
+      loading: "Sending message...",
+      success: (data) => data.message,
+      error: (err) => err.message || "An unexpected error occurred. Please try again.",
+    });
   }
 
   const containerVariants = {
@@ -125,7 +137,7 @@ export function ContactSection() {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
+              {/* <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
@@ -133,7 +145,7 @@ export function ContactSection() {
                   <h4 className="font-medium">Phone</h4>
                   <p className="text-muted-foreground">+32 (0) 488 802 851</p>
                 </div>
-              </div>
+              </div> */}
             </div>
           </motion.div>
 

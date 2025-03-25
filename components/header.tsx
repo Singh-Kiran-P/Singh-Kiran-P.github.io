@@ -57,7 +57,7 @@ export function Header() {
           </nav>
 
           <div className="hidden md:block">
-            <Link href="mailto:kiran@kscode.eu">
+            <Link href="#contact">
             <Button>Get in Touch</Button>
 
             </Link>

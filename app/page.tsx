@@ -6,6 +6,7 @@ import { ProjectsSection } from "@/components/projects-section"
 import { CollaborateSection } from "@/components/collaborate-section"
 import { ContactSection } from "@/components/contact-section"
 import { ParticleBackground } from "@/components/particle-background"
+import { Toaster } from "sonner"
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <ProjectsSection />
       <CollaborateSection />
       <ContactSection />
+      <Toaster />
     </main>
   )
 }
