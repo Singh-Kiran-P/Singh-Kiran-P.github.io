@@ -9,12 +9,13 @@ import PlausibleProvider from 'next-plausible'
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
-  title: "Singh Kiran | Data Scientist & Software Engineer",
-  description:
-    "Portfolio of Singh Kiran, a data scientist and software engineer specializing in machine learning, algorithmic solutions, and impactful applications.",
-    generator: 'v0.dev'
-}
+export const metadata:Metadata = {
+  title: "Expert Technical Services | AI, Machine Learning, Software Engineering & More",
+  description: "Providing specialized services in data science, software engineering, machine learning, cybersecurity, DevOps, and open-source development. If you’re facing an A+ problem, I’m the expert who can solve it and help drive revenue growth with innovative, customized solutions.",
+  keywords: "AI services, machine learning, data science, software engineering, cybersecurity, DevOps, open-source development, technical expertise, revenue growth, complex problem-solving, customized solutions",
+  applicationName: "KsCode"
+};
+
 
 export default function RootLayout({
   children,

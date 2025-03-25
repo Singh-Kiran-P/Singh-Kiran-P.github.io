@@ -92,7 +92,10 @@ export function Header() {
                     {item.name}
                   </Link>
                 ))}
+                            <Link href="#contact">
+
                 <Button className="w-full">Get in Touch</Button>
+                </Link>
               </nav>
             </div>
           </motion.div>
