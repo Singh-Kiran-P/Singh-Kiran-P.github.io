@@ -135,7 +135,7 @@ export async function sendContactForm({ name, email, message }: ContactFormProps
       
       const { data1, error1 } = await resend.emails.send({
         from: "Kscode <info@kscode.eu>",
-        to: "kiran@kscode.eu",
+        to: "kiran.palsingh@kscode.eu",
         subject: "New Contact Form Submission",
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
