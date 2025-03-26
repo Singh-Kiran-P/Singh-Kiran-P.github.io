@@ -50,6 +50,30 @@ export async function subscribeToNewsletter({ email }: SubscribeToNewsletterProp
       `,
     })
 
+    const { data1, error1 } = await resend.emails.send({
+      from: "Contact Form<info@kscode.eu>",
+      to: "kiran@kscode.eu",
+      subject: "Contact",
+      html: `
+        <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+          <h1 style="color: #f59e0b; margin-bottom: 24px;">Welcome to PULSE Festival!</h1>
+          <p style="margin-bottom: 16px;">Thank you for subscribing to our newsletter. You'll now receive updates about:</p>
+          <ul style="margin-bottom: 24px;">
+            <li>Artist announcements</li>
+            <li>Special ticket offers</li>
+            <li>Festival updates</li>
+            <li>Behind-the-scenes content</li>
+          </ul>
+          <p style="margin-bottom: 24px;">We're excited to have you join our community of Punjabi and Bollywood music lovers!</p>
+          <div style="background: linear-gradient(to right, #f59e0b, #ea580c); padding: 2px; border-radius: 4px;">
+            <div style="background-color: #000; padding: 16px; border-radius: 2px; text-align: center;">
+              <a href="https://your-website.com/tickets" style="color: #f59e0b; text-decoration: none; font-weight: bold;">GET YOUR TICKETS NOW</a>
+            </div>
+          </div>
+        </div>
+      `,
+    })
+
     if (error) {
       console.error("Error sending email:", error)
       return { success: false, error: "Failed to send confirmation email" }
@@ -104,6 +128,34 @@ export async function sendContactForm({ name, email, message }: ContactFormProps
             </div>
             <div style="text-align: center; padding: 15px; background-color: #0A84FF; border-radius: 0 0 8px 8px;">
               <p style="font-size: 12px; color: #777;">This is an automated confirmation email.</p>
+            </div>
+          </div>
+        `,
+      });
+      
+      const { data1, error1 } = await resend.emails.send({
+        from: "Kscode <info@kscode.eu>",
+        to: "kiran@kscode.eu",
+        subject: "New Contact Form Submission",
+        html: `
+          <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto; padding: 20px; background-color: #f9f9f9; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            
+            <!-- Header -->
+            <div style="background-color: #0A84FF; padding: 15px; border-radius: 8px 8px 0 0; text-align: center;">
+              <h2 style="color: #fff; margin: 0;">New Contact Form Submission</h2>
+            </div>
+    
+            <!-- Email Content -->
+            <div style="padding: 20px; background-color: #fff;">
+              <p style="color: #333; font-size: 16px; margin-bottom: 10px;"><strong>Name:</strong> ${name}</p>
+              <p style="color: #333; font-size: 16px; margin-bottom: 10px;"><strong>Email:</strong> ${email}</p>
+              <p style="color: #333; font-size: 16px; margin-bottom: 10px;"><strong>Message:</strong></p>
+              <p style="color: #555; font-size: 14px; background-color: #f1f1f1; padding: 10px; border-radius: 5px;">${message}</p>
+            </div>
+    
+            <!-- Footer -->
+            <div style="text-align: center; padding: 15px; background-color: #0A84FF; border-radius: 0 0 8px 8px;">
+              <p style="font-size: 12px; color: #fff;">This is an automated notification from Kscode.</p>
             </div>
           </div>
         `,
