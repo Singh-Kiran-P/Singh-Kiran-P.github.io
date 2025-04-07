@@ -43,7 +43,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.3 }}
         >
-          Hello, my name is <br className="hidden md:block" />
+          Hi, my name is <br className="hidden md:block" />
           <span className="text-primary">Kiran</span>
         </motion.h1>
 
@@ -53,8 +53,7 @@ export function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
         >
-          I'm a data scientist and software engineer focused on building impactful applications that solve real-world
-          problems through machine learning, algorithmic thinking, and clean code.
+          I’m passionate about using technology to make life easier and better. As a data scientist and software engineer, I create smart, practical tools that solve real-world problems—by combining data, creative thinking, and clean, efficient code.
         </motion.p>
 
         <motion.div
