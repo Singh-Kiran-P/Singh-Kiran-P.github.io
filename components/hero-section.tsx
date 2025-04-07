@@ -3,7 +3,7 @@
 import { useRef } from "react"
 import { motion, useScroll, useTransform } from "framer-motion"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Github } from "lucide-react"
+import { ArrowRight, MessageCircle } from "lucide-react"
 import Link from "next/link"
 
 export function HeroSection() {
@@ -69,12 +69,12 @@ export function HeroSection() {
           </Button>
           </Link>
        
-          {/* <Link href="https://github.com" target="_blank">
+          <Link href="https://webchat.kscode.eu" target="_blank">
             <Button size="lg" variant="outline" className="gap-2">
-              <Github className="h-4 w-4" />
-              GitHub
+              <MessageCircle className="h-4 w-4" />
+              Latest Project
             </Button>
-          </Link> */}
+          </Link>
         </motion.div>
       </motion.div>
     </section>
