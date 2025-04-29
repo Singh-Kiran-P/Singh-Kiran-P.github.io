@@ -141,7 +141,7 @@ export function ContactSection() {
                   <Building className="h-6 w-6 text-primary" />
                 </div>
                 <div>
-                  <h4 className="font-medium">Company</h4>
+                  <h4 className="font-medium">KsCode</h4>
                   <p className="text-muted-foreground">BTW 0802.423.986</p>
                 </div>
               </div>
