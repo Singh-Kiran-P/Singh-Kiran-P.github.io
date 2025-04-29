@@ -7,7 +7,7 @@ import { motion, useInView } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { MapPin, Mail, Phone, Send } from "lucide-react"
+import { MapPin, Mail, Building, Send } from "lucide-react"
 import { sendContactForm } from "@/lib/actions"
 import { toast } from "sonner"
 
@@ -136,7 +136,15 @@ export function ContactSection() {
                   <p className="text-muted-foreground">kiran@kscode.eu</p>
                 </div>
               </div>
-
+              <div className="flex items-start space-x-4">
+                <div className="p-3 rounded-full bg-primary/10">
+                  <Building className="h-6 w-6 text-primary" />
+                </div>
+                <div>
+                  <h4 className="font-medium">Company</h4>
+                  <p className="text-muted-foreground">BTW 0802.423.986</p>
+                </div>
+              </div>
               {/* <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />
