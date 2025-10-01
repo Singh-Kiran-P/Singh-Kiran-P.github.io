@@ -12,9 +12,7 @@ export function AboutSection() {
     hidden: { opacity: 0 },
     visible: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.2,
-      },
+      transition: { staggerChildren: 0.2 },
     },
   }
 
@@ -49,27 +47,28 @@ export function AboutSection() {
 
         <motion.div variants={itemVariants} className="space-y-6">
           <div className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium">
-            About Me
+            About KsCode
           </div>
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            Building Impactful Applications Through Data & Code
+            Partnering With You to Build Impactful Applications
           </h2>
           <p className="text-lg text-muted-foreground">
-            I hold a master's degree in computer science with a specialization in data science and computer
-            networking/security. I'm passionate about collaborating with clients to overcome significant business
-            challenges and drive revenue growth through cutting-edge technologies like machine learning.
+            KsCode combines deep expertise in data science, software engineering, and networking to help 
+            businesses tackle critical challenges and unlock new opportunities. With a master’s degree in 
+            computer science and years of hands-on consulting, Kiran brings both technical depth and 
+            practical insight to every project.
           </p>
           <p className="text-lg text-muted-foreground">
-            My journey began at age 12 when I started programming, and by 2019, I was building software for clients.
-            Throughout both my bachelor's and master's studies, I worked as a consultant, gaining hands-on experience
-            while studying full-time.
+            From early programming at age 12 to delivering client projects since 2019, KsCode has grown 
+            into a trusted partner for organizations seeking scalable, secure, and data-driven solutions 
+            that deliver measurable results.
           </p>
           <ul className="space-y-3">
             {[
-              "Machine Learning & Data Science",
-              "Software Engineering & DevOps",
-              "System Architecture",
-              "Cybersecurity & Networking",
+              "Machine Learning & Data Science – turn data into actionable insights",
+              "Software Engineering & DevOps – build scalable, maintainable applications",
+              "System Architecture – design reliable, future-ready systems",
+              "Cybersecurity & Networking – protect your business with robust security",
             ].map((item, index) => (
               <motion.li key={index} className="flex items-center gap-3" variants={itemVariants}>
                 <div className="h-6 w-6 rounded-full bg-primary/20 flex items-center justify-center">
@@ -97,4 +96,3 @@ export function AboutSection() {
     </section>
   )
 }
-
