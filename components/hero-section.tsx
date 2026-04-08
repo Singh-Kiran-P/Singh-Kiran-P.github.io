@@ -26,67 +26,33 @@ export function HeroSection() {
         style={{ opacity }}
       />
 
-      <motion.div
-        className="container max-w-6xl mx-auto text-left relative z-10"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 0.2 }}
-        style={{ opacity, y }}
-      >
+      <div className="container max-w-6xl mx-auto text-left relative z-10">
         <div className="grid gap-8 lg:grid-cols-[1.4fr_1fr]">
           <div className="space-y-6">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-              className="inline-flex items-center gap-2 px-5 py-2 bg-primary/15 text-primary rounded-full text-xs font-semibold uppercase tracking-[0.2em]"
-            >
+            <div className="inline-flex items-center gap-2 px-5 py-2 bg-primary/15 text-primary rounded-full text-xs font-semibold uppercase tracking-[0.2em]">
               Decision latency killer
               <span className="h-2 w-2 rounded-full bg-primary shadow-[0_0_0_8px_rgba(14,165,233,0.16)]" />
-            </motion.div>
+            </div>
 
-            <motion.h1
-              className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.1 }}
-            >
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.05]">
               Data systems that reduce cost, increase speed, and de-risk decisions
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              className="text-lg md:text-xl text-muted-foreground max-w-3xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-            >
+            <p className="text-lg md:text-xl text-muted-foreground max-w-3xl">
               I design and build production-grade data and software systems that replace manual processes, surface
               decision-critical insights, and scale without rewrites. Businesses hire KsCode when experimentation is over
               and execution matters.
-            </motion.p>
+            </p>
 
-            <motion.div
-              className="flex flex-wrap gap-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
+            <div className="flex flex-wrap gap-3">
               {["Production AI", "Cloud-native data", "Microservices", "Security first"].map((tag) => (
-                <span
-                  key={tag}
-                  className="rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-sm text-primary"
-                >
+                <span key={tag} className="rounded-full border border-primary/30 bg-primary/10 px-4 py-1 text-sm text-primary">
                   {tag}
                 </span>
               ))}
-            </motion.div>
+            </div>
 
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.25 }}
-            >
+            <div className="flex flex-col sm:flex-row gap-4">
               <Link href="#contact">
                 <Button size="lg" className="group">
                   Start a project
@@ -99,14 +65,9 @@ export function HeroSection() {
                   View CV
                 </Button>
               </Link>
-            </motion.div>
+            </div>
 
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-              className="grid gap-4 sm:grid-cols-3"
-            >
+            <div className="grid gap-4 sm:grid-cols-3">
               {[
                 { title: "Health", body: "Recommendation engines and decision support that ship to production." },
                 { title: "Energy", body: "P2P energy platforms, forecasting, and resilience for critical workloads." },
@@ -117,7 +78,7 @@ export function HeroSection() {
                   <p className="mt-2 text-sm text-muted-foreground">{card.body}</p>
                 </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
           <motion.div
@@ -175,7 +136,7 @@ export function HeroSection() {
             </div>
           </motion.div>
         </div>
-      </motion.div>
+      </div>
     </section>
   )
 }
