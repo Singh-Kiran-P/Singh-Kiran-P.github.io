@@ -39,7 +39,7 @@ export function ContactSection() {
           if (result.success) {
             setStatus("success");
             setFormData({ name: "", email: "", message: "", subject: "" });
-            return { message: `Hey ${formState.name}😄, Your message has been sent!` };
+            return { message: `Hey ${formState.name}, your message has been sent!` };
           } else {
             setStatus("error");
             throw new Error(result.error || "Failed to send message. Please try again.");
@@ -73,7 +73,7 @@ export function ContactSection() {
   }
 
   return (
-    <section ref={ref} id="contact" className="w-full py-20 bg-muted/50">
+    <section ref={ref} id="contact" className="w-full py-20 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-border/30">
       <div className="container max-w-6xl mx-auto px-4">
         <div className="text-center mb-16">
           <motion.div
@@ -82,7 +82,7 @@ export function ContactSection() {
             transition={{ duration: 0.5 }}
             className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
           >
-            Get In Touch
+            Contact
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -90,7 +90,7 @@ export function ContactSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl font-bold tracking-tight mb-4"
           >
-            Contact Me
+            KsCode - Data systems engineered to hold under pressure
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -98,8 +98,7 @@ export function ContactSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            Have a project in mind or want to discuss a technical challenge? I'd love to hear from you and explore how
-            we can collaborate.
+            If you want results, hire KsCode. Drop a note with context and the outcomes you need.
           </motion.p>
         </div>
 
@@ -110,11 +109,8 @@ export function ContactSection() {
           className="grid grid-cols-1 lg:grid-cols-2 gap-12"
         >
           <motion.div variants={itemVariants} className="space-y-8">
-            <h3 className="text-2xl font-semibold">Let's Discuss Your Project</h3>
-            <p className="text-muted-foreground">
-              Whether you're looking to build a data-driven application, need help with a machine learning model, or
-              want to collaborate on an open source project, I'm here to help.
-            </p>
+            <h3 className="text-2xl font-semibold">Belgium</h3>
+            <p className="text-muted-foreground">KsCode serves teams where experimentation is over and execution matters.</p>
 
             <div className="space-y-6">
               <div className="flex items-start space-x-4">
@@ -145,6 +141,9 @@ export function ContactSection() {
                   <p className="text-muted-foreground">BTW 0802.423.986</p>
                 </div>
               </div>
+              <p className="pt-2 text-muted-foreground text-sm">
+                Data systems engineered to hold under pressure. No slides. Working systems only.
+              </p>
               {/* <div className="flex items-start space-x-4">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />
@@ -233,4 +232,3 @@ export function ContactSection() {
     </section>
   )
 }
-

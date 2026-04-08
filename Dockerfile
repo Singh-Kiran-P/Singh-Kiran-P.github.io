@@ -31,7 +31,7 @@ ENV NODE_ENV production
 # Disable telemetry
 ENV NEXT_TELEMETRY_DISABLED 1
 
-RUN adduser --system --uid 1001 nextjs
+RUN useradd --system --uid 1001 nextjs
 
 COPY --from=builder /app/public ./public
 
@@ -46,9 +46,9 @@ COPY --from=builder --chown=nextjs:bun /app/.next/static ./.next/static
 
 USER nextjs
 
-EXPOSE 3000
+EXPOSE 3345
 
-ENV PORT 3000
+ENV PORT 3345
 
 # Set hostname to localhost
 ENV HOSTNAME "0.0.0.0"

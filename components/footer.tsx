@@ -52,7 +52,7 @@ export function Footer() {
 
         <div className="mt-8 pt-8 border-t border-border/40 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm text-muted-foreground">
-            © {new Date().getFullYear()} Singh Kiran. All rights reserved.
+            (c) {new Date().getFullYear()} Singh Kiran. All rights reserved.
           </p>
           <div className="mt-4 md:mt-0 flex space-x-6">
             <Link href="#" className="text-sm text-muted-foreground hover:text-primary transition-colors">
@@ -67,4 +67,3 @@ export function Footer() {
     </footer>
   )
 }
-

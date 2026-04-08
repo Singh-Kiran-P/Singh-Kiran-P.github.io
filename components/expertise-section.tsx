@@ -2,45 +2,33 @@
 
 import { useRef } from "react"
 import { motion, useInView } from "framer-motion"
-import { Database, Code, BarChart3, Shield, Server, GitBranch } from "lucide-react"
+import { Database, Code, Shield, Server, Gauge, CheckCircle } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 
 const expertise = [
   {
     icon: <Database className="h-10 w-10 text-primary" />,
-    title: "Data Science",
+    title: "Data & Machine Learning Systems",
     description:
-      "Building predictive models, data pipelines, and analytics solutions that extract actionable insights from complex datasets.",
+      "Production ML pipelines, forecasting models, recommendation engines, analytics layers - designed to integrate with real infrastructure and real users.",
   },
   {
     icon: <Code className="h-10 w-10 text-primary" />,
     title: "Software Engineering",
     description:
-      "Developing scalable, maintainable applications with clean architecture and modern development practices.",
-  },
-  {
-    icon: <BarChart3 className="h-10 w-10 text-primary" />,
-    title: "Machine Learning",
-    description:
-      "Implementing ML algorithms and deep learning models to solve complex problems and automate decision-making processes.",
+      "Backend systems, APIs, microservices, and internal tools built for reliability, observability, and scale.",
   },
   {
     icon: <Shield className="h-10 w-10 text-primary" />,
-    title: "Cybersecurity",
+    title: "Security & Reliability",
     description:
-      "Securing applications and networks against threats with expertise in vulnerability assessment and penetration testing.",
+      "Threat modeling, vulnerability assessment, and system hardening to prevent avoidable incidents.",
   },
   {
     icon: <Server className="h-10 w-10 text-primary" />,
-    title: "DevOps & Cloud",
+    title: "Architecture & DevOps",
     description:
-      "Streamlining development workflows with CI/CD pipelines and cloud infrastructure automation for optimal performance.",
-  },
-  {
-    icon: <GitBranch className="h-10 w-10 text-primary" />,
-    title: "Open Source",
-    description:
-      "Contributing to and maintaining open source projects that advance the state of technology and foster community collaboration.",
+      "Cloud and hybrid architectures, CI/CD pipelines, infrastructure as code - engineered to reduce failure modes and operational overhead.",
   },
 ]
 
@@ -68,16 +56,16 @@ export function ExpertiseSection() {
   }
 
   return (
-    <section ref={ref} id="expertise" className="w-full py-20 bg-muted/50">
+    <section ref={ref} id="services" className="w-full py-20 bg-gradient-to-b from-slate-900 to-slate-950 border-t border-border/30">
       <div className="container max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
             className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
           >
-            Technical Expertise
+            Services
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -85,7 +73,7 @@ export function ExpertiseSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl font-bold tracking-tight mb-4"
           >
-            Specialized Technical Skills
+            Outcome-first build tracks
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -93,8 +81,8 @@ export function ExpertiseSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            My technical foundation spans multiple domains, allowing me to approach problems holistically and implement
-            comprehensive solutions that deliver real impact.
+            Engineering for production constraints, not demos. Each track is designed to reduce decision latency and
+            keep systems alive after delivery.
           </motion.p>
         </div>
 
@@ -102,24 +90,66 @@ export function ExpertiseSection() {
           variants={containerVariants}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4"
         >
           {expertise.map((item, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="h-full transition-all duration-300 hover:shadow-lg hover:-translate-y-1 bg-background/50 backdrop-blur-sm">
-                <CardHeader>
-                  <div className="mb-4">{item.icon}</div>
-                  <CardTitle>{item.title}</CardTitle>
+              <Card className="h-full transition-all duration-300 hover:shadow-xl hover:-translate-y-1 bg-slate-900/80 backdrop-blur-sm border-primary/15">
+                <CardHeader className="space-y-3">
+                  <div className="flex items-center gap-3">
+                    <div className="p-2 rounded-xl bg-primary/10">{item.icon}</div>
+                    <CardTitle className="text-lg">{item.title}</CardTitle>
+                  </div>
                 </CardHeader>
                 <CardContent>
-                  <CardDescription className="text-base">{item.description}</CardDescription>
+                  <CardDescription className="text-sm">{item.description}</CardDescription>
                 </CardContent>
               </Card>
             </motion.div>
           ))}
         </motion.div>
+
+        <div className="mt-12 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              title: "Core outcomes",
+              items: ["Reduced decision latency", "Reliable releases", "Operational clarity", "Security from day one"],
+              icon: <Gauge className="h-5 w-5 text-primary" />,
+            },
+            {
+              title: "How I work",
+              items: ["Architecture to implementation", "MLOps + DevOps integrated", "Cloud + hybrid ready", "Documentation and handover"],
+              icon: <Code className="h-5 w-5 text-primary" />,
+            },
+            {
+              title: "Delivery proof",
+              items: ["Health platforms in production", "LLM assistants with guardrails", "Energy and IoT systems", "Funding unlocked through prototypes"],
+              icon: <CheckCircle className="h-5 w-5 text-primary" />,
+            },
+          ].map((card, index) => (
+            <motion.div
+              key={card.title}
+              initial={{ opacity: 0, y: 15 }}
+              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
+              transition={{ duration: 0.5, delay: 0.1 * index }}
+              className="rounded-2xl border border-border/50 bg-slate-900/70 p-5 space-y-3"
+            >
+              <div className="flex items-center gap-2 text-sm uppercase tracking-[0.12em] text-primary">
+                {card.icon}
+                {card.title}
+              </div>
+              <ul className="space-y-2 text-muted-foreground text-sm">
+                {card.items.map((item) => (
+                  <li key={item} className="flex items-start gap-2">
+                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
   )
 }
-

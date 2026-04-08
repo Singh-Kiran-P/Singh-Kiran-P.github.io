@@ -8,25 +8,23 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 const achievements = [
   {
     icon: <Award className="h-8 w-8 text-primary" />,
-    title: "Top 10 Algorithmic Minds",
-    description:
-      "Recognized as one of the top 10 algorithmic minds in Belgium during the Vlaamse programmeerwedstrijd 2022.",
+    title: "Top-10 national algorithmic placement (Belgium)",
+    description: "Scored top-10 in the Vlaamse programmeerwedstrijd national contest.",
   },
   {
     icon: <Code2 className="h-8 w-8 text-primary" />,
-    title: "Cybersecurity Excellence",
-    description: "Reached the top 10% out of 282 teams in the finals of Belgium's CTF challenge in cybersecurity.",
+    title: "Top 10% finalist in national cybersecurity CTF",
+    description: "Competed against 282 teams and reached the finals.",
   },
   {
     icon: <Briefcase className="h-8 w-8 text-primary" />,
-    title: "Startup Funding Success",
-    description:
-      "Helped a startup secure crucial initial funding by developing a prototype that positioned them as industry leaders.",
+    title: "Prototypes that unlocked funding",
+    description: "Built prototypes that enabled early-stage startups to secure funding.",
   },
   {
     icon: <Users className="h-8 w-8 text-primary" />,
-    title: "Visionary Collaborations",
-    description: "Worked with CTOs, CEOs, and product managers, expanding technical proficiency and leadership skills.",
+    title: "Production work across domains",
+    description: "Delivered systems used in health, energy, and data-intensive environments. Not academic. Applied.",
   },
 ]
 
@@ -54,16 +52,16 @@ export function AchievementsSection() {
   }
 
   return (
-    <section ref={ref} id="achievements" className="w-full py-20 bg-background">
+    <section ref={ref} id="proof" className="w-full py-20 bg-gradient-to-b from-slate-950 to-slate-900 border-t border-border/30">
       <div className="container max-w-6xl mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.5 }}
             className="inline-block px-4 py-1.5 bg-primary/10 text-primary rounded-full text-sm font-medium mb-4"
           >
-            Professional Achievements
+            Proof of Competence
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -71,7 +69,7 @@ export function AchievementsSection() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-3xl md:text-4xl font-bold tracking-tight mb-4"
           >
-            Recognition & Impact
+            Defensible signals, not fluff
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -79,8 +77,7 @@ export function AchievementsSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-lg text-muted-foreground max-w-2xl mx-auto"
           >
-            My work has been recognized in competitive environments and has created tangible value for organizations
-            across various sectors.
+            Outcome-oriented work and competitive results that translate into working systems.
           </motion.p>
         </div>
 
@@ -92,7 +89,7 @@ export function AchievementsSection() {
         >
           {achievements.map((achievement, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="h-full bg-background/50 backdrop-blur-sm">
+              <Card className="h-full bg-slate-900/80 backdrop-blur-sm border-primary/15 transition-all duration-300 hover:border-primary/40 hover:-translate-y-1">
                 <CardHeader className="flex flex-row items-center gap-4">
                   <div className="p-2 rounded-full bg-primary/10">{achievement.icon}</div>
                   <CardTitle>{achievement.title}</CardTitle>
@@ -108,4 +105,3 @@ export function AchievementsSection() {
     </section>
   )
 }
-

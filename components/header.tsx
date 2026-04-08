@@ -9,11 +9,12 @@ import { usePathname } from "next/navigation"
 
 const navItems = [
   { name: "Home", href: "/" },
-  { name: "About", href: "#about" },
-  { name: "Expertise", href: "#expertise" },
-  { name: "Achievements", href: "#achievements" },
-  { name: "Projects", href: "#projects" },
+  { name: "Approach", href: "#about" },
+  { name: "Services", href: "#services" },
+  { name: "Proof", href: "#proof" },
+  { name: "Work", href: "#projects" },
   { name: "Contact", href: "#contact" },
+  { name: "CV", href: "/cv" },
 ]
 
 export function Header() {
@@ -104,4 +105,3 @@ export function Header() {
     </header>
   )
 }
-
